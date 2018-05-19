@@ -13,6 +13,7 @@ namespace Ex04.Menu.Interfaces
 
 		public MainMenu(string i_Name) : base(i_Name)
 		{
+
 		}
 	}
 }

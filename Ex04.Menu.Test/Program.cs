@@ -8,6 +8,8 @@ namespace Ex04.Menu.Test
 	{
 		static void Main(string[] args)
 		{
+			InterfaceTest test = new InterfaceTest();
+			test.Show();
 		}
 	}
 }

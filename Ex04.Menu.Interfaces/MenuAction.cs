@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Ex04.Menu.Interfaces
 {
-	internal class MenuAction : MenuItem
+	public class MenuAction : MenuItem
 	{
 		private IMenuItemSelectedListener m_WhenSelectedHandler;
 
@@ -30,6 +30,8 @@ namespace Ex04.Menu.Interfaces
 		{
 			Console.Clear();
 			notifySelectedListener();
+			Console.WriteLine("Press enter to return to the menu.");
+			Console.ReadLine();
 		}
 
 		private void notifySelectedListener()
