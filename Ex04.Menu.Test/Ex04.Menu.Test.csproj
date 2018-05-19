@@ -35,6 +35,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CapitalsCounter.cs" />
+    <Compile Include="DelegatesTest.cs" />
     <Compile Include="InterfaceTest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

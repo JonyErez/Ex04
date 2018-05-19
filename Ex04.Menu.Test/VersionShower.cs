@@ -7,7 +7,7 @@ namespace Ex04.Menu.Test
 {
 	public class VersionShower : IMenuItemSelectedListener
 	{
-		public void DoWhenSelected(string i_OptionName)
+		public void DoWhenSelected()
 		{
 			showVersion();
 		}

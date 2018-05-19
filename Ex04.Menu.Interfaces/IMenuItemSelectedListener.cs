@@ -6,6 +6,6 @@ namespace Ex04.Menu.Interfaces
 {
 	public interface IMenuItemSelectedListener
 	{
-		void DoWhenSelected(string i_OptionName);
+		void DoWhenSelected();
 	}
 }

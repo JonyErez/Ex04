@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Ex04.Menu.Interfaces
+namespace Ex04.Menu.Delegates
 {
 	public class ValueOutOfRangeException : Exception
 	{

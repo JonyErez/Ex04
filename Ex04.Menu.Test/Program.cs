@@ -4,12 +4,14 @@ using System.Text;
 
 namespace Ex04.Menu.Test
 {
-	class Program
+	public class Program
 	{
-		static void Main(string[] args)
+		public static void Main()
 		{
-			InterfaceTest test = new InterfaceTest();
-			test.Show();
+			InterfaceTest interfaceTest = new InterfaceTest();
+			DelegatesTest delegatesTest = new DelegatesTest();
+			interfaceTest.Show();
+			delegatesTest.Show();
 		}
 	}
 }

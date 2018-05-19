@@ -36,7 +36,7 @@ namespace Ex04.Menu.Interfaces
 
 		private void notifySelectedListener()
 		{
-			m_WhenSelectedHandler.DoWhenSelected(Name);
+			m_WhenSelectedHandler.DoWhenSelected();
 		}
 	}
 }

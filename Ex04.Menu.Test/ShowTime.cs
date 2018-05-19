@@ -7,7 +7,7 @@ namespace Ex04.Menu.Test
 {
 	public class TimeShower : IMenuItemSelectedListener
 	{
-		public void DoWhenSelected(string i_OptionName)
+		public void DoWhenSelected()
 		{
 			showTime();
 		}
