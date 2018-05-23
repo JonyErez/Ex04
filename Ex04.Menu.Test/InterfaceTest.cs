@@ -2,21 +2,19 @@
 
 namespace Ex04.Menu.Test
 {
-	public class InterfaceTest
+	internal class InterfaceTest
 	{
 		private MainMenu m_MainMenu;
 
-		private void createMenu()
+		private void	createMenu()
 		{
 			m_MainMenu = new MainMenu("Interface Test Menu");
-
-			SubMenu    showDateTime       = new SubMenu("Show Date/Time");
-			MenuAction showTime           = new MenuAction("Show Time", new TimeShower());
-			MenuAction showDate           = new MenuAction("Show Date", new DateShower());
-			SubMenu    versionAndCapitals = new SubMenu("Version and Capitals");
-			MenuAction countCapital       = new MenuAction("Count Capitals", new CapitalsCounter());
-			MenuAction showVersion        = new MenuAction("Show Vesion", new VersionShower());
-
+			SubMenu		showDateTime		= new SubMenu("Show Date/Time");
+			MenuAction	showTime			= new MenuAction("Show Time", new TimeShower());
+			MenuAction	showDate			= new MenuAction("Show Date", new DateShower());
+			SubMenu		versionAndCapitals	= new SubMenu("Version and Capitals");
+			MenuAction	countCapital		= new MenuAction("Count Capitals", new CapitalsCounter());
+			MenuAction	showVersion			= new MenuAction("Show Vesion", new VersionShower());
 			m_MainMenu.AddMenuItem(showDateTime);
 			m_MainMenu.AddMenuItem(versionAndCapitals);
 			showDateTime.AddMenuItem(showTime);
@@ -25,7 +23,7 @@ namespace Ex04.Menu.Test
 			versionAndCapitals.AddMenuItem(showVersion);
 		}
 
-		public void Show()
+		public	void	Show()
 		{
 			createMenu();
 			m_MainMenu.Show();

@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Ex04.Menu.Test
+﻿namespace Ex04.Menu.Test
 {
-	public class Program
+	public static class Program
 	{
 		public static void Main()
 		{

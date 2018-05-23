@@ -6,13 +6,13 @@ namespace Ex04.Menu.Delegates
 
 	public class MenuAction : MenuItem
 	{
-		public event MenuOptionSelectedDelegate Selected;
+		public		event				MenuOptionSelectedDelegate	Selected;
 
-		public MenuAction(string i_Name) : base(i_Name)
+		public														MenuAction(string i_Name) : base(i_Name)
 		{
 		}
 
-		protected internal override void doWhenSelected()
+		protected	internal override	void						doWhenSelected()
 		{
 			Console.Clear();
 			onSelected();
@@ -20,7 +20,7 @@ namespace Ex04.Menu.Delegates
 			Console.ReadLine();
 		}
 
-		protected virtual void onSelected()
+		protected	virtual				void						onSelected()
 		{
 			if (Selected != null)
 			{

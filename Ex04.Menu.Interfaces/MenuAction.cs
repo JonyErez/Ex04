@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Ex04.Menu.Interfaces
 {
@@ -8,25 +6,19 @@ namespace Ex04.Menu.Interfaces
 	{
 		private IMenuItemSelectedListener m_WhenSelectedHandler;
 
-		public MenuAction(string i_Name, IMenuItemSelectedListener i_Listener) : base(i_Name)
+		public															MenuAction(string i_Name, IMenuItemSelectedListener i_Listener) : base(i_Name)
 		{
 			m_WhenSelectedHandler = i_Listener;
 		}
 
-		public IMenuItemSelectedListener MenuItemSelectedListener
+		public								IMenuItemSelectedListener	MenuItemSelectedListener
 		{
-			get
-			{
-				return m_WhenSelectedHandler;
-			}
+			get { return m_WhenSelectedHandler; }
 
-			set
-			{
-				m_WhenSelectedHandler = value;
-			}
+			set { m_WhenSelectedHandler = value; }
 		}
 
-		protected internal override void doWhenSelected()
+		protected internal override			void						doWhenSelected()
 		{
 			Console.Clear();
 			notifySelectedListener();
@@ -34,7 +26,7 @@ namespace Ex04.Menu.Interfaces
 			Console.ReadLine();
 		}
 
-		private void notifySelectedListener()
+		private								void						notifySelectedListener()
 		{
 			m_WhenSelectedHandler.DoWhenSelected();
 		}

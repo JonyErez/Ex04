@@ -11,15 +11,14 @@ namespace Ex04.Menu.Delegates
 		{
 		}
 
-		protected internal override void doWhenSelected()
+		protected internal	override	void	doWhenSelected()
 		{
 			Show();
 		}
 
-		public void Show()
+		public							void	Show()
 		{
 			uint userInput;
-
 			do
 			{
 				Console.Clear();
@@ -27,36 +26,37 @@ namespace Ex04.Menu.Delegates
 				userInput = getMenuOption(r_MenuItems.Count);
 				if (userInput != 0)
 				{
-					r_MenuItems[(int)userInput - 1].doWhenSelected();
+					r_MenuItems[(int) userInput - 1].doWhenSelected();
 				}
-			} while (userInput != 0);
+			}
+			while (userInput != 0);
 		}
 
-		private void printMenuOptions()
+		private							void	printMenuOptions()
 		{
 			int currentOption = 1;
+			Console.WriteLine(
+				@"{0}
 
-			Console.WriteLine(@"{0}
-
-Menu options:", Name);
+Menu options:",
+				Name);
 			foreach (MenuItem menuItem in r_MenuItems)
 			{
-				Console.WriteLine("{0}. {1}", currentOption, menuItem.ToString());
+				Console.WriteLine("{0}. {1}", currentOption, menuItem);
 				currentOption++;
 			}
 
 			printReturnLine();
 		}
 
-		protected virtual void printReturnLine()
+		protected			virtual		void	printReturnLine()
 		{
 			Console.WriteLine("0. Back");
 		}
 
-		private uint getMenuOption(int i_MaxAvailableInput)
+		private							uint	getMenuOption(int i_MaxAvailableInput)
 		{
 			uint selectedMenuOption;
-
 			while (true)
 			{
 				try
@@ -79,7 +79,7 @@ Menu options:", Name);
 			return selectedMenuOption;
 		}
 
-		private uint validateInput(string i_UserInput, int i_MaxAvailableInput)
+		private							uint	validateInput(string i_UserInput, int i_MaxAvailableInput)
 		{
 			uint selectedMenuOption;
 			try
@@ -90,6 +90,7 @@ Menu options:", Name);
 			{
 				throw new ValueOutOfRangeException(0, i_MaxAvailableInput, string.Format(@"The value you entered is out of range. Please enter a valid input between {0}-{1}.", 0, i_MaxAvailableInput), ex);
 			}
+
 			if (selectedMenuOption > i_MaxAvailableInput)
 			{
 				throw new ValueOutOfRangeException(0, i_MaxAvailableInput, string.Format(@"The value you entered is out of range. Please enter a valid input between {0}-{1}.", 0, i_MaxAvailableInput));
@@ -98,7 +99,7 @@ Menu options:", Name);
 			return selectedMenuOption;
 		}
 
-		public void AddMenuItem(MenuItem i_MenuItemToAdd)
+		public							void	AddMenuItem(MenuItem i_MenuItemToAdd)
 		{
 			r_MenuItems.Add(i_MenuItemToAdd);
 		}
